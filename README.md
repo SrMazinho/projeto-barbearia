@@ -1,5 +1,5 @@
 # projeto-barbearia
 
-Tecnologias para backend
+Tecnologias para backend II
 
 Equipe: Iremar Flor e Lucas Gabriel
