@@ -1,6 +1,6 @@
 package br.com.iesp.barbearia.service;
 
-import br.com.iesp.barbearia.entity.Servico;
+import Model.RoleModel;
 import br.com.iesp.barbearia.repository.ServicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,34 +14,34 @@ public class ServicoService {
     @Autowired
     private ServicoRepository repository;
 
-    public Servico save(Servico venda){
-        venda = repository.save(venda);
-        return venda;
+    public RoleModel save(RoleModel role){
+        role = repository.save(role);
+        return role;
     }
 
-    public Servico update(Servico venda){
-        if(venda.getId() == null){
+    public RoleModel update(RoleModel role){
+        if(role.getId() == null){
             throw new RuntimeException("Objeto inexistente.");
         }
-        venda = repository.save(venda);
-        return venda;
+        role = repository.save(role);
+        return role;
     }
 
-    public List<Servico> findAll(){
+    public List<RoleModel> findAll(){
         return repository.findAll();
     }
 
-    public Optional<Servico> findById(Long id){
+    public Optional<RoleModel> findById(Long id){
         if(repository.findById(id).orElse(null) == null){
             throw new RuntimeException("Objeto inexistente.");
         }
         return repository.findById(id);
     }
 
-    public void delete(Servico venda){
-        if(venda.getId() == null){
+    public void delete(Servico role){
+        if(role.getId() == null){
             throw new RuntimeException("Objeto inexistente.");
         }
-        repository.delete(venda);
+        repository.delete(role);
     }
 }

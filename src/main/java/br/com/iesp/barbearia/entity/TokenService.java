@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Servico implements Serializable {
+public class TokenService implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
